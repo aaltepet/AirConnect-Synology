@@ -5,3 +5,4 @@ package.tgz
 /dist
 src/dsm7/bin/**
 src/dsm/bin/**
+.vscode

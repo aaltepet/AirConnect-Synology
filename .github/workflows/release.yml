@@ -24,7 +24,7 @@ jobs:
           path: "."
       - name: Get latest AirConnect release
         id: get_release
-        uses: robinraju/release-downloader@v1.12
+        uses: robinraju/release-downloader@v1.13
         with:
           repository: "philippe44/AirConnect"
           latest: true
@@ -64,7 +64,7 @@ jobs:
 
       - name: Creating GitHub Release
         id: create_release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: |
             src/dsm7/dist/*.spk
@@ -74,7 +74,7 @@ jobs:
 
       - name: Upload releases to artifacts
         id: upload_releases
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: releases
           path: src/dsm7/dist/
